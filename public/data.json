@@ -1,0 +1,157 @@
+{
+   "swagger":"2.0",
+   "info":{
+      "description":"This is the Swagger UI for virtual API using feathersjs",
+      "version":"1.0.0",
+      "title":"Virtual API",
+      "termsOfService":"",
+      "contact":{
+         "email":"rpatel@officebrain.com"
+      },
+      # "license":{
+      #   "name":"Apache 2.0",
+      #   "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+      # }
+   },
+   "host":"localhost:3030",
+   
+   "tags": [
+      {
+        "name": "Sequance Generate",
+        "description": "Everything about the image genarted sequance",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "localhost:3030"
+        }
+      }
+    ],
+  
+   "schemes":[
+      "http"
+   ],
+   "paths":{
+      "/post-data":{
+         "get":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"get all sequance",
+            "description":"",
+            "operationId":"addPet",
+            "consumes":[
+               "application/json",
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name": "_id",
+                  "in": "query",
+                  "description": "The user name for login",
+                  "required": false,
+                  "type": "string"
+                },
+                {
+                  "name": "sequence",
+                  "in": "query",
+                  "description": "The password for login in clear text",
+                  "required": false,
+                  "type": "string"
+                }
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
+         }
+      },
+      "/supplier-master":{
+         "get":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"get all suppliers",
+            "description":"",
+            "consumes":[
+               "application/json",
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name": "supplierId",
+                  "in": "query",
+                  "description": "supplier Id",
+                  "required": false,
+                  "type": "string"
+                },
+                {
+                  "name": "referenceId",
+                  "in": "query",
+                  "description": "Reference Id for supplier",
+                  "required": false,
+                  "type": "string"
+                }
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
+         }
+      },
+      "/product-exist":{
+         "get":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"Check product exist or not",
+            "description":"",
+            "consumes":[
+               "application/json",
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name": "sku",
+                  "in": "query",
+                  "description": "SKU",
+                  "required": true,
+                  "type": "string"
+                },
+                {
+                  "name": "supplierMasterId",
+                  "in": "query",
+                  "description": "Supplier Id",
+                  "required": true,
+                  "type": "string"
+                },
+                {
+                  "name": "status",
+                  "in": "query",
+                  "description": "Status, should be true",
+                  "required": true,
+                  "type": "boolean"
+                },
+                {
+                  "name": "personalized",
+                  "in": "query",
+                  "description": "personalized, should be 1",
+                  "required": true,
+                  "type": "integer"
+                }
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
+         }
+      }
+   }
+}
