@@ -22,6 +22,7 @@ const mongoose = require('./mongoose');
 
 const app = feathers();
 
+
 // Load app configuration
 app.configure(configuration());
 // Enable CORS, security, compression, favicon and body parsing
