@@ -12,6 +12,7 @@ const virtualProductImprint = require('./virtual-product-imprint/virtual-product
 const virtualProductImages = require('./virtual-product-images/virtual-product-images.service.js');
 const productColor = require('./product-color/product-color.service.js');
 const productDetails = require('./product-details/product-details.service.js');
+const products = require('./products/products.service.js');
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(virtualProductMaster);
@@ -28,4 +29,5 @@ module.exports = function () {
   app.configure(virtualProductImages);
   app.configure(productColor);
   app.configure(productDetails);
+  app.configure(products);
 };

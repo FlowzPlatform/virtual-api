@@ -65,6 +65,36 @@
                   "description":"Invalid input"
                }
             }
+         },
+         "post":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"get all sequance",
+            "description":"",
+            "operationId":"addPost",
+            "consumes":[
+               "application/json",
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+              {
+                "in": "body",
+                "name": "body",
+                "description": "Pet object that needs to be added to the store",
+                "required": true,
+                "schema": {
+                  "$ref": ""
+                }
+              }
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
          }
       },
       "/supplier-master":{
@@ -95,6 +125,72 @@
                   "required": false,
                   "type": "string"
                 }
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
+         }
+      },    
+      "/font-family":{
+         "get":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"get all fonts",
+            "description":"",
+            "consumes":[
+               "application/json",
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+              
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
+         }
+      },
+      "/product-details":{
+         "get":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"get the product details",
+            "description":"",
+            "consumes":[
+               "application/json",
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+              {   
+                "name": "_id",
+                "in": "query",
+                "description": "Id",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "name": "sku",
+                "in": "query",
+                "description": "sku",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "name": "locale",
+                "in": "query",
+                "description": "locale",
+                "required": true,
+                "type": "string"
+              }
             ],
             "responses":{
                "405":{
@@ -152,6 +248,35 @@
                }
             }
          }
-      }
+      },
+      "/uploads":{
+         "post":{
+           "tags": [
+              "Sequance Generate"
+            ],
+            "summary":"Upload an Image",
+            "description":"",
+            "consumes":[
+              "multipart/form-data"
+            ],
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+              {
+                "name": "uri",
+                "in": "formData",
+                "description": "file to upload",
+                "required": true,
+                "type": "string"
+              }
+            ],
+            "responses":{
+               "405":{
+                  "description":"Invalid input"
+               }
+            }
+         }
+      },
    }
 }
