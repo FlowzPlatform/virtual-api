@@ -13,7 +13,7 @@ const blobService = require('feathers-blob');
 // but you can use feathers-blob with any other
 // storage service like AWS or Google Drive.
 
-const custom_directory = '/home/software/openresty-lua/html/user-uploaded-images'
+const custom_directory = '/home/software/github/openresty-lua/html/user-uploaded-images'
 const fs = require('fs-blob-store');
 
 const blobStorage = fs(custom_directory);

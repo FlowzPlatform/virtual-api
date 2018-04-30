@@ -16,7 +16,7 @@ module.exports = function () {
 
         hook.result.imageurl = imageServer;
         
-        let path = '/home/software/openresty-lua/html/user-uploaded-images/'+hook.result.id
+        let path = '/home/software/github/openresty-lua/html/user-uploaded-images/'+hook.result.id
 
         const fs = require('fs');
         fs.chmod(path, 0777, function(err){
